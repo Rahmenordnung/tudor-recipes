@@ -41,7 +41,7 @@ class ChefTest < ActiveSupport::TestCase
   end
 
   test "email should accept correct format" do
-    valid_emails = %w[user@example.com TUDOR@gmail.com M.first@yahoo.ca john+smith@co.uk.org]
+    valid_emails = %w[user@example.com TUDOR@gmail.com T.first@yahoo.ca john+smith@co.uk.org]
     valid_emails.each do |valids|
       @chef.email = valids
       assert @chef.valid?, "#{valids.inspect} should be valid"

@@ -6,5 +6,6 @@ class Chef < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   validates :chef_stars, inclusion: 0...5 , numericality: { only_integer: true }
+  has_many :recipes
 
 end
