@@ -8,6 +8,6 @@ class Chef < ApplicationRecord
   validates :chef_stars, inclusion: 0...5 , numericality: { only_integer: true }
   has_many :recipes
   has_secure_password
-  validates :password, presence: true, length: { minimum: 5 }
+  validates :password, presence: true, length: { minimum: 5 }, allow_nil: true
 
 end
