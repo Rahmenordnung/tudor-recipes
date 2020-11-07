@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update]
   
   def index
-    @recipes = Recipe.all
+     @recipes = Recipe.paginate(page: params[:page], per_page: 5)
   end
   
   def show
@@ -45,11 +45,11 @@ class RecipesController < ApplicationController
   
   private
   
-    def set_recipe
-      @recipe = Recipe.find(params[:id])
-    end
-  
-    def recipe_params
-      params.require(:recipe).permit(:name, :description, :cooking_time)
-    end
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :description, :cooking_time)
+  end
 end

@@ -20,6 +20,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'rails-controller-testing'
 
+gem 'will_paginate', '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
