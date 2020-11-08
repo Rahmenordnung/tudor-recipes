@@ -5,12 +5,16 @@
   <hr />
   <%= simple_format(@recipe.description) %>
   <hr />
+  <% if @recipe.ingredients.any? %>
+    <p>Ingredients: <%= render @recipe.ingredients %></p>
+    <p>This recipes can be created in <%= @recipe.cooking_time %> minutes</p>
+  <% end %>
   <div class="pull-right">
     <p class="center">
       <em>Created by:</em>
     </p>
     <p class="center">
-      <%= link_to gravatar_for(@recipe.chef), recipes_path %>
+      <%= link_to gravatar_for(@recipe.chef), chef_path(@recipe.chef) %>
     </p>
     <p class="center">
       <small><%= @recipe.chef.chefname.capitalize %></small>
