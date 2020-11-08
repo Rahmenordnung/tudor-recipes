@@ -4,7 +4,7 @@ class ChefsController < ApplicationController
   before_action :require_admin, only: [:destroy]
   
   
-   def index
+  def index
     @chefs = Chef.paginate(page: params[:page], per_page: 5)
   end
   
@@ -15,6 +15,7 @@ class ChefsController < ApplicationController
   def create
     @chef = Chef.new(chef_params)
     if @chef.save
+      cookies.signed[:chef_id] = @chef.id
       session[:chef_id] = @chef.id
       flash[:success] = "Welcome #{@chef.chefname} to MyRecipes App!"
       redirect_to chef_path(@chef)
