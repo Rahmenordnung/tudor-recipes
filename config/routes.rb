@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get '/chat', to: 'chatrooms#show'
 
   resources :messages, only: [:create]
+  
+  post '/search' => 'search#search'
 end
 
 
