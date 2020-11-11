@@ -8,6 +8,10 @@
     <div class="col-md-8 well">
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       <p><%= truncate(recipe.description, length: 150) %></p>
+      <% if recipe.categories.any? %>
+        <p>Category: <%= render recipe.categories %></p>
+      <% end %>
+      
       <% if recipe.ingredients.any? %>
         <p>Ingredients: <%= render recipe.ingredients %></p>
       <% end %>

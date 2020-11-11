@@ -11,7 +11,6 @@ class RecipesController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @recipe.comments.paginate(page: params[:page], per_page: 5)
-    
   end
   
   def new
@@ -66,7 +65,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :cooking_time, ingredient_ids: [])
+    params.require(:recipe).permit(:name, :description, :cooking_time, ingredient_ids: [], category_ids: [])
   end
   
   def require_same_user

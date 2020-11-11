@@ -4,11 +4,17 @@
   <h4 class="center description"><strong>Steps: </strong></h4>
   <hr />
   <%= simple_format(@recipe.description) %>
+  
   <hr />
+    <% if @recipe.categories.any? %>
+  <p>Category: <%= render @recipe.categories %></p>
+  <% end %>
   <% if @recipe.ingredients.any? %>
     <p>Ingredients: <%= render @recipe.ingredients %></p>
-    <p>This recipes can be created in <%= @recipe.cooking_time %> minutes</p>
   <% end %>
+  
+  <p>This recipes can be created in <%= @recipe.cooking_time %> minutes</p>
+
   <div class="pull-right">
     <p class="center">
       <em>Created by:</em>

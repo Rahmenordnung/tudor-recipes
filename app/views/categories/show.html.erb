@@ -1,0 +1,21 @@
+<%= render 'shared_pages/page_title', title: @category.title %>
+
+<% if @category.recipes.count != 0 %>
+  <h4 align="center">Recipes belonging to <%= @category.title %> category</h4>
+  
+  <div align="center">
+    <%= will_paginate @category_recipes %>
+  </div>
+  <%= render 'recipes/recipe', obj: @category_recipes %>
+  <div align="center">
+    <%= will_paginate @category_recipes %>
+  </div>
+<% else %>
+  <h4 align="center">No recipes yet!</h4>
+<% end %>
+
+
+
+
+
+

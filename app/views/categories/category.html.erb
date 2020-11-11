@@ -1,0 +1,40 @@
+<%= render 'shared_pages/page_title', title: @recipe.name %>
+
+<% if @recipe.length == 0  %>
+<br />
+<h2>There are currently no products in this category</h2>
+<% end %>
+
+
+<div class="well col-md-8 col-md-offset-2">
+  <h4 class="center description"><strong>Steps: </strong></h4>
+  <hr />
+  <%= simple_format(@recipe.description) %>
+  <%= simple_format(@recipe.category) %>
+  <hr />
+  <% if @recipe.ingredients.any? %>
+    <p>Ingredients: <%= render @recipe.ingredients %></p>
+    <p>This recipes can be created in <%= @recipe.cooking_time %> minutes</p>
+  <% end %>
+  <div class="pull-right">
+    <p class="center">
+      <em>Created by:</em>
+    </p>
+    <p class="center">
+      <%= link_to gravatar_for(@recipe.chef), chef_path(@recipe.chef) %>
+    </p>
+    <p class="center">
+      <small><%= @recipe.chef.chefname.capitalize %></small>
+      <div class="pull-right"><%= time_ago_in_words(@recipe.created_at) %> ago</div>
+    </p>
+  </div>
+  <div class="recipe-actions">
+    <% if logged_in? && (current_chef == @recipe.chef || current_chef.admin?) %>
+      <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-xs btn-warning" %>
+      <%= link_to "Delete this recipe", recipe_path(@recipe), method: :delete,
+                                        data: { confirm: "Are you sure you want to delete this recipe?" },
+                                        class: "btn btn-xs btn-danger" %>
+    <% end %>                                  
+    <%= link_to "Return to recipes listing", recipes_path, class: "btn btn-xs btn-primary" %>
+  </div>
+</div>

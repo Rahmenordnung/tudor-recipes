@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  resources :categories
   root "pages#home"
   get 'pages/home', to: 'pages#home'
+  
+  get 'category/:title', to: 'category#category'
   
   resources :recipes do
     resources :comments, only: [:create]

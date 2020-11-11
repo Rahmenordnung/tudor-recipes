@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "MyRecipes", root_path, class: "navbar-brand", id: "logo" %>
+      <%= link_to "E-Recipes", root_path, class: "navbar-brand", id: "logo" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -22,15 +22,30 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><%= link_to "Create a new recipe", new_recipe_path %></li>
-              <li><a href="#">Another action</a></li>
+              <li><%= link_to "All Recipes", recipes_path %></li>
               <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              
+              <li><a href="#">Something else here</a></li>
             </ul>
           </li>
         <% end %>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "All Categories", categories_path %></li>
+            <% Category.all.each do |category| %>
+              <li><%= link_to category.title.capitalize, category_path(category) %></li>
+            <% end %>
+            <% if logged_in? && current_chef.admin? %>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to "New Ingredient", new_category_path %></li>
+            <% end %>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ingredients <span class="caret"></span></a>
           <ul class="dropdown-menu">

@@ -5,7 +5,7 @@
     <%= form_for(@recipe, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
         <div class="control-label col-md-2">
-          <%= f.label :name %>
+          <%= f.label :name  %>
         </div>
         <div class="col-md-8">
           <%= f.text_field :name, class: "form-control", placeholder: "Name of recipe", autofocus: true %>
@@ -13,7 +13,7 @@
       </div>
       <div class="form-group">
         <div class="control-label col-md-2">
-          <%= f.label :description %>
+          <%= f.label :description  %>
         </div>
         <div class="col-md-8">
           <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Enter steps to create recipe" %>
@@ -29,6 +29,23 @@
       </div>
       <div class="form-group">
         <div class="row">
+          <div class="control-label col-md-2">
+            <%= f.label :category %>
+          </div>
+          <div class="col-md-offset-2 col-md-8">
+            <%= f.collection_check_boxes :category_ids, Category.all, :id, :title do |cb| %>
+              <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr>
+   
+      <div class="form-group">
+        <div class="row">
+          <div class="control-label col-md-2">
+              <%= f.label :ingredients %>
+          </div>
           <div class="col-md-offset-2 col-md-8">
             <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name do |cb| %>
               <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
