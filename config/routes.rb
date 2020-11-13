@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :categories
   root "pages#home"
   get 'pages/home', to: 'pages#home'
+  get 'pages/charts', to: 'pages#charts'
   
   get 'category/:title', to: 'category#category'
   

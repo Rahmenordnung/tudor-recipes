@@ -6,6 +6,7 @@ class ChefsController < ApplicationController
   
   def index
     @chefs = Chef.paginate(page: params[:page], per_page: 5)
+    @data = Chef.group(:chef_name).count
   end
   
   def new

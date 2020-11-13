@@ -14,7 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require chartkick
+//= require Chart.bundle
 //= require_tree .
+
+
 
 function scrollToBottom(){
   if($('#messages').length > 0) {
