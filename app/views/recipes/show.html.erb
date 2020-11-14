@@ -4,6 +4,7 @@
   <h4 class="center description"><strong>Steps: </strong></h4>
   <hr />
   <%= simple_format(@recipe.description) %>
+  <%= image_tag @recipe.image, :class => 'welcomIm'  %>
   
   <hr />
     <% if @recipe.categories.any? %>

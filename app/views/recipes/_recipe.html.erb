@@ -6,7 +6,10 @@
       </section>
     </div>
     <div class="col-md-8 well">
+      
+      <%= image_tag recipe.image, :class => 'welcomIm'  %>
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+      
       <p><%= truncate(recipe.description, length: 150) %></p>
       <% if recipe.categories.any? %>
         <p>Category: <%= render recipe.categories %></p>
@@ -14,6 +17,7 @@
       
       <% if recipe.ingredients.any? %>
         <p>Ingredients: <%= render recipe.ingredients %></p>
+        
       <% end %>
       <p>
           <span class="quiet"><small>Created <%= time_ago_in_words(recipe.created_at) %> ago by <%= recipe.chef.chefname.capitalize %>

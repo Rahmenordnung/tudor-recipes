@@ -1,4 +1,6 @@
 class Recipe < ApplicationRecord
+  mount_uploader :image, FileUploader
+  
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 5, maximum: 500 }
   validates :cooking_time, presence: true
