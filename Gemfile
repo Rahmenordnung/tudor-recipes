@@ -24,13 +24,12 @@ gem 'carrierwave', '~> 2.0'
 
 
 
-
 gem 'prawn'
 
 gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'chartkick', '~> 2.2.0'
-gem 'groupdate'
+
 
 
 # Use jquery as the JavaScript library
