@@ -20,15 +20,15 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'carrierwave', '~> 2.0'
 
 
-gem 'fog-aws'
-gem "fog"
+# gem 'fog-aws'
+# gem "fog"
 
 
 gem 'prawn'
 
 gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
-# gem 'chartkick', '~> 2.2.0'
+gem 'chartkick', '~> 2.2.0'
 
 
 
