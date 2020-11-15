@@ -6,8 +6,14 @@
       </section>
     </div>
     <div class="col-md-8 well">
+      <%= image_tag recipe.image, :class => '', :style => 'width: 100%;'  %>
       
-      <%= image_tag recipe.image, :class => 'welcomIm'  %>
+
+      
+      
+      
+      
+      
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       
       <p><%= truncate(recipe.description, length: 150) %></p>

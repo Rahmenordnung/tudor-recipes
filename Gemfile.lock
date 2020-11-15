@@ -104,7 +104,11 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    pdf-core (0.8.1)
     pg (1.2.3)
+    prawn (2.3.0)
+      pdf-core (~> 0.8.1)
+      ttfunk (~> 1.6)
     public_suffix (4.0.6)
     puma (3.12.6)
     rack (2.2.3)
@@ -170,6 +174,7 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    ttfunk (1.6.2.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -198,11 +203,12 @@ DEPENDENCIES
   carrierwave (~> 2.0)
   chartkick (~> 1.4, >= 1.4.1)
   coffee-rails (~> 4.2)
-  groupdate (~> 2.5, >= 2.5.2)
+  groupdate
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   pg
+  prawn
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails-controller-testing

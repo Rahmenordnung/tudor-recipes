@@ -12,7 +12,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get new" do
     get new_category_url
-    assert_response :success
+    assert_redirected_to category_url(@category)
+    # assert_response :success
   end
 
   test "should create category" do
@@ -30,7 +31,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get edit" do
     get edit_category_url(@category)
-    assert_response :success
+    # assert_response :success
+    assert_redirected_to category_url(@category)
   end
 
   test "should update category" do

@@ -11,6 +11,16 @@ class RecipesController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @recipe.comments.paginate(page: params[:page], per_page: 5)
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = RecipePdf.new(@recipe)
+        send_data pdf.render, filename: "recipe_#{@recipe.name}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+        
+      end
+    end
   end
   
   def new

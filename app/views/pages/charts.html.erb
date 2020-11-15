@@ -8,12 +8,16 @@
     <%= line_chart Recipe.group(:created_at).count %>
 </div> 
 <div class="container">
-    <%= column_chart Recipe.group(:name).count %>
+    <%= column_chart Recipe.group(:likes).count %>
+</div>
+
+<div class="container">
+    <%= column_chart Ingredient.group(:name).count %>
 </div>
 
 
 <div class="container">
-    <%=  column_chart Recipe.group(:chefname).group(:cooking_time).count, legend: true %>
+    <%=  column_chart Recipe.group(:name).group(:cooking_time).count, legend: true %>
 </div>
 
 <div class="container">
@@ -21,7 +25,7 @@
 
 </div>
 <div class="container">
-    <%=  column_chart Recipe.group(:title).group(:name).count %>
+    <%=  column_chart Recipe.group(:chef_name).group(:cooking_time).count %>
 
 </div>
 
