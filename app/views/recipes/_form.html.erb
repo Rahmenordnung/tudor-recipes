@@ -29,14 +29,20 @@
       </div>
        <div class="form-group">
         <div class="control-label col-md-2">
-          <%= f.label :image, "Add Image" %>
+          <%= f.label :image, "Add Recipe image" %>
         </div>
         <div class="col-md-8">
-          <%= f.file_field :image, accept: 'umage/jpeg,umage/gif,umage/png' %>
-          
-          <hr>
-          <p>nzggzu</p>
-          <%= f.file_field :image %>y
+          <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :remote_image_url, " or add image_url" %>
+        </div>
+        <div class="col-md-8">
+          <%= f.text_field :remote_image_url %>
+
         </div>
       </div>
       

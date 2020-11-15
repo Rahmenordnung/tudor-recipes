@@ -30,7 +30,6 @@ Rails.application.routes.draw do
   
   get 'search', to: "search#search"
   
-  # post '/search' => 'search#search'
 end
 
 
