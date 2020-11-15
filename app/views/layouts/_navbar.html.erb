@@ -60,14 +60,16 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left">
-        <%= form_tag("/search", :method => "post" , :class => 'navbar-form navbar-left', :placeholder => "Search") do %>
-            <div class="form-group">
-            <%= text_field_tag(:q) %>
-            </div>
-            <%= submit_tag("Search", :class=>'btn btn-default') %>
-          <% end %>
-      </form>
+      
+    <div class="navbar-form navbar-left">   
+      <%= form_tag("/search", :method => "post") do %>
+      <%= label_tag(:q, "Search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search", :class => "btn btn-default") %>
+      <% end %>
+    </div>
+     
+
 
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
