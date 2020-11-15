@@ -28,7 +28,9 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:create]
   
-  post '/search' => 'search#search'
+  get 'search', to: "search#search"
+  
+  # post '/search' => 'search#search'
 end
 
 
