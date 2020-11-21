@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root "pages#home"
   get 'pages/home', to: 'pages#home'
   get 'pages/charts', to: 'pages#charts'
-  get 'pages/template', to: 'pages#template'
   
   get 'category/:title', to: 'category#category'
   
@@ -32,5 +31,3 @@ Rails.application.routes.draw do
   get 'search', to: "search#search"
   
 end
-
-

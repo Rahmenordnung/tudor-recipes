@@ -688,29 +688,7 @@ ol.flex-control-nav { display: none; }
   margin-bottom: 10px;
   text-align: justify;
 }
-.about-link {
-  background: #d54a4a;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  display: inline-block;
-  color: white;
-  font-size: 20px;
-  border-left: 8px solid black;
-  margin-top: 5px;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-}
-.about-link-2 {
-  font-size: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-transform: none;
-}
-.about-link:hover,
-.about-link:focus {
-  color: #F62F2F;
-  background: black;
-}
+
 
 /* Contact page */
 #google-map { height: 525px; }
