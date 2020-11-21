@@ -6,11 +6,20 @@ $navbar-default-bg: #073B15;
 .center {
   text-align: center;
 }
+.container{
+  width:1220px;
+       padding-left: 0; 
+       padding-right: 0;
+}
 
 .jumbotron {
-  background-image: asset-url('jumbotron.jpg');
+  // background-image: asset-url('jumbotron.jpg');
   background-size: cover;
-  height: 800px;
+}
+
+  .background_video{  
+  height: 100%;      
+  width: 100%;
 }
 
 
@@ -184,9 +193,84 @@ footer ul li {
 }
 
 
-/*---------------------------navbar effect ----*/
+/*---------------------------scroll ----*/
 
 
+body{
+  
+  font-size:16px;
+  
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:Poppins;
+}
+
+p{
+  font-family:Roboto;
+}
+
+.navbar-default{
+  background:#fff;
+  border:0;
+  font-family:Poppins;
+}
+
+.navbar-brand{
+  font-size:20px;
+  color:#000 !important;
+  font-weight:bold;
+}
+
+#showcase h1{
+  margin-top: 10px;
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+#showcase img{    
+  margin-top: 10px;
+  width:90%;
+  margin-left:60px;
+}
+
+#showcase .showcase-right{
+  margin-top:90px;
+}
+
+#testimonial{
+  background:#f1f1f1;
+  padding: 50px 0 30px 0;
+  text-align:center;
+  margin-top:40px;
+}
+
+#testimonial p{
+  font-size:32px;
+  font-family: 'Josefin Sans';
+  color:#000;
+}
+
+#testimonial p.customer{
+  font-size:20px;
+  color:#666;
+}
+
+#info1 .info-right{
+  margin-top:90px;
+}
+
+#info2{
+  margin:20px 0 60px 0;
+}
+
+#contact{
+  background:url(../img/image3.png);
+  padding:40px;
+  color:#fff;
+  border-top:#333 7px solid;
+  border-bottom:#333 7px solid;
+}
 
 
 /*--------------footer*/
@@ -355,5 +439,55 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+
+
+/*carousel */
+
+.carousel {
+  position: relative;
+}
+.carousel-item img {
+  object-fit: cover;
+}
+#carousel-thumbs {
+  background: rgba(255,255,255,.3);
+  bottom: 0;
+  left: 0;
+  padding: 0 50px;
+  right: 0;
+}
+#carousel-thumbs img {
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+#carousel-thumbs img:hover {
+  border-color: rgba(255,255,255,.3);
+}
+#carousel-thumbs .selected img {
+  border-color: #fff;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+}
+@media all and (max-width: 767px) {
+  .carousel-container #carousel-thumbs img {
+    border-width: 3px;
+  }
+}
+@media all and (min-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    position: absolute;
+  }
+}
+@media all and (max-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    background: #ccccce;
+  }
+}
+
+
+
+
 
 

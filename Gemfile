@@ -22,10 +22,11 @@ gem 'rails-controller-testing'
 
 gem 'carrierwave', '~> 2.0'
 
-
 gem 'prawn'
 
+gem "scrollreveal-rails" 
 
+gem 'popper_js', '~> 1.14.5'
 
 gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
