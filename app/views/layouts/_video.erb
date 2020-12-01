@@ -1,2 +1,10 @@
-     <%= video_tag(
-    "Food.mp4", class: "background_video", autoplay:true, loop:true, muted:true, poster: 'macau.jpg', title: 'jvzguggu' ) %>
+<div class="jumbotron center" id="first_container">
+  <h1 class="welcome_text" >Welcome to Yummy E-Recipes</h1>
+  <h2 class= "welcome_text" >The best recipe sharing app!</h2>
+  <p><%= link_to "View all Recipes", recipes_path, class: "btn btn-danger btn-lg btn-xlarge" %></p>
+</div>  
+            
+            <%= video_tag(
+    "Food.mp4", class: "jumbotron_video", autoplay:true, loop:true, muted:true, poster: 'macau.jpg', title: 'jvzguggu' ) %>
+
+     

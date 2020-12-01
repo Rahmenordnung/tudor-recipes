@@ -60,4 +60,24 @@ $(window).scroll(function() {
   }
 });
 
+ 
+ 
+
+
+
+//  $('#first_container').plate({
+
+//   // inverse animation
+//   inverse: false,
+
+//   // transformation perspective in pixels
+//   perspective: 100,
+
+//   // maximum rotation in degrees
+//   maxRotation: 3,
+
+//   // duration in milliseconds
+//   animationDuration: 200
+  
+// });
 

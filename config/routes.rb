@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get 'pages/home', to: 'pages#home'
   get 'pages/charts', to: 'pages#charts'
   
+  get 'pages/contact', to: 'pages#contact'
+  get 'pages/about', to: 'pages#about'
+  get 'pages/services', to: 'pages#services'
+  
+  
   get 'category/:title', to: 'category#category'
   
   resources :recipes do

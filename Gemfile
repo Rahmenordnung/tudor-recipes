@@ -18,6 +18,10 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem "font-ionicons-rails", git: 'https://github.com/ricardoemerson/font-ionicons-rails.git'
+
+gem 'font-awesome-sass', '~> 4.6.2'
+
 gem 'rails-controller-testing'
 
 gem 'carrierwave', '~> 2.0'
@@ -31,6 +35,13 @@ gem 'popper_js', '~> 1.14.5'
 gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'chartkick', '~> 2.2.0'
+
+
+gem 'ruby-graphviz'
+
+gem 'railroady', '~> 1.5', '>= 1.5.3'
+
+gem 'rails-erd', :require=>false
 
 
 
@@ -63,6 +74,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  
+  
 end
 
 group :production do

@@ -2,7 +2,7 @@
 
 <div class="well col-md-8 col-md-offset-2">
   
-
+<p><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></p>
 
 
   <%= image_tag @recipe.image, :class => '' , :style => 'width: 100%;'  %>
@@ -43,7 +43,7 @@
   </div>
 </div>
 
-<p><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></p>
+
 
 <div class="row">
   <div class="row col-md-8 col-md-offset-2">
