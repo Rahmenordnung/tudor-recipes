@@ -1,3 +1,4 @@
+  
    <!-- Bootstrap CSS -->
 
     <title>TechScroll</title>
@@ -98,7 +99,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <div class="info-left">
-                <%= image_tag("pepper.jpg", :alt => "rss feed") %>
+                <%= image_tag("pepper.jpg", :alt => "rss feed", :class => "img_left") %>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
@@ -138,6 +139,9 @@
         <p class="customer">- John Doe</p>
       </div>
     </section>
+    
+    <!-- Back to top button -->
+      <a id="button"></a>
     
 
   
@@ -227,5 +231,21 @@
     <script>
       $('.carousel').carousel()
     </script>
+    
+    <script>
+      var btn = $('#button');
 
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
 
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+      
+    </script>

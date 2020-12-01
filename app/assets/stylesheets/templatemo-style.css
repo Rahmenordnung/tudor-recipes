@@ -229,61 +229,6 @@ body {
 }
 .mobile-menu-icon { display: none; }
 
-/* Welcome */
-.templatemo-welcome {
-  color: white;
-  margin-top: 150px;
-}
-.welcome-img { margin-top: 30px; }
-.welcome-title-1 {
-  color: #b53636;
-  font-size: 36px;
-}
-.welcome-title-2 { font-size: 52px; }
-.welcome-title-1,
-.welcome-title-2 {
- display: block;
-}
-.welcome-message { line-height: 1.6em; }
-.welcome-read-more {
- color: white;
- font-weight: 700;
- text-transform: uppercase;
-}
-.welcome-read-more:hover { color: #b53636; }
-.tm-overflow-hidden { overflow: hidden; }
-.margin-bottom-15 { margin-bottom: 15px; }
-.margin-bottom-30 { margin-bottom: 30px; }
-.margin-bottom-50 { margin-bottom: 50px; }
-.tm-img-1-container {
- cursor: pointer;
- float: left;
- max-width: 240px;
- width: 25%;
- height: auto;
- position: relative;
-}
-.tm-img-1-container img {
- width: 100%;
- height: auto;
-}
-.tm-img-1-description {
-  background-color: rgba(0,0,0,0.6);
-  padding: 15px 20px;
-  text-transform: uppercase;
-  color: white;
-  text-align: right;
-  font-size: 18px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin: 0;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-}
-.tm-img-1-container:hover .tm-img-1-description { opacity: 1; }
 
 /* Gallery */
 .tm-gallery { float: right; }

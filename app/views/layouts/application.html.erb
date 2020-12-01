@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <html>
   <head>
     <title>Recip</title>
@@ -7,7 +10,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    
   </head>
 
   <body>
@@ -15,12 +18,7 @@
     
     <%= render 'layouts/messages' %>
     
-    <% if current_page?(root_path) %>
-  <%= render 'layouts/video' %>
-<% end %>
-    
-    
-    
+
     <div class="container">
       <%= yield %>
     </div>

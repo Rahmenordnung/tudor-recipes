@@ -62,22 +62,39 @@ $(window).scroll(function() {
 
  
  
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
 
 
 
-//  $('#first_container').plate({
 
-//   // inverse animation
-//   inverse: false,
+ $('#first_container').plate({
 
-//   // transformation perspective in pixels
-//   perspective: 100,
+  // inverse animation
+  inverse: false,
 
-//   // maximum rotation in degrees
-//   maxRotation: 3,
+  // transformation perspective in pixels
+  perspective: 100,
 
-//   // duration in milliseconds
-//   animationDuration: 200
+  // maximum rotation in degrees
+  maxRotation: 3,
+
+  // duration in milliseconds
+  animationDuration: 200
   
-// });
+});
+
+
 
