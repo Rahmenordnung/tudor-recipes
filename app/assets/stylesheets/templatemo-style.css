@@ -378,11 +378,12 @@ body {
   color: white;
 }
 .tm-banner-title {
-  margin: 30px 0 30px 50px;
+  margin: 30px 0 30px 10px;
 }
 .tm-banner-description {
   margin: 0;
   max-width: 580px;
+  margin-left: 10px;
 }
 .tm-banner-link {
   background: #b53636;
@@ -912,7 +913,11 @@ ol.flex-control-nav { display: none; }
   }
   .tm-banner-title { margin: 20px auto; }
   .tm-banner-description { margin: 0 15px 20px 15px; }
-  .tm-banner-link { width: 100%; }
+  .tm-banner-link { 
+                    width: 100%;
+                    margin-top: 5%;                
+    
+                  }
   
   .about-page .templatemo-welcome, 
   .contact-page .templatemo-welcome, 

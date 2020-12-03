@@ -5,14 +5,12 @@
         <%= gravatar_for(recipe.chef, size: 120) %>
       </section>
     </div>
-    <div class="col-md-8 well">
+    <div class="col-md-8 well box ">
       <% if recipe.image? %>
         <%= image_tag recipe.image, :class => '', :style => 'width: 100%;'  %>
       <% else %>
         <%= image_tag("comming_soon.jpg", :class => 'default-image', :alt => "rss feed") %>
       <% end %>
-      
-      
 
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       

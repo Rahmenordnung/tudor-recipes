@@ -8,7 +8,8 @@
 <% if @chef.recipes.count != 0 %>
   <h4 align="center"><%= @chef.chefname %>'s recipes</h4>
   <h4 align="center"><%= @chef.email %> </h4>
-  <h4 align="center"><%= @chef.chef_stars %> </h4>
+  <h4 align="center">Chef starts:  <% @chef.chef_stars.to_i.times do  %><i class="fa fa-star"></i><% end %></h4>
+        
   <div align="center">
     <%= will_paginate @chef_recipes %>
   </div>
@@ -19,5 +20,7 @@
 <% else %>
   <h4 align="center">No recipes yet!</h4>
 <% end %>
+
+
 
 

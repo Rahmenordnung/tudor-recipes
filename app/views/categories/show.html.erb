@@ -1,7 +1,6 @@
 <%= render 'shared_pages/page_title', title: @category.title %>
 
 <% if @category.recipes.count != 0 %>
-  <h4 align="center">Recipes belonging to <%= @category.title %> category</h4>
   
   <div align="center">
     <%= will_paginate @category_recipes %>

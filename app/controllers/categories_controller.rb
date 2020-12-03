@@ -55,9 +55,14 @@ class CategoriesController < ApplicationController
       flash[:success] = "Category deleted successfully"
     redirect_to categories_path
   end
+  
+  def initial
+      self[0,1]
+    end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+  
+  # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id])
     end

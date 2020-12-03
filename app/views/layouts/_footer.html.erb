@@ -1,17 +1,17 @@
     <!--Footer content-->
     
-    
     <footer class="tm-footer">
       
         <div class="row margin-bottom-60">
           <nav class="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
             <h3 class="tm-footer-div-title">Main Menu</h3>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="gallery.html">Directory</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="services.html">Our Services</a></li>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%=link_to "About", pages_about_path%></li>
+              <li><%=link_to "Contact", pages_contact_path%></li>
+              <li><%=link_to "Services", pages_services_path%></li>
+              <li><%=link_to "Charts", pages_charts_path%></li>
+            
             </ul>
           </nav>
           <div class="col-lg-5 col-md-5 tm-footer-div">
@@ -23,11 +23,11 @@
             <h3 class="tm-footer-div-title">Get Social</h3>
             <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante.</p>
             <div class="tm-social-icons-container">
-              <a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-youtube"></i></a>
-              <a href="#" class="tm-social-icon"><i class="fa fa-behance"></i></a>
+              <a href="https://www.facebook.com/simplyrecipes/" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
+              <a href="https://mobile.twitter.com/?lang=de" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/feed/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/watch?v=fcD94e93cCk" class="tm-social-icon"><i class="fa fa-youtube"></i></a>
+              <a href="https://www.behance.net/" class="tm-social-icon"><i class="fa fa-behance"></i></a>
             </div>
           </div>
         </div>

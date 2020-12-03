@@ -4,21 +4,24 @@
   
 <p><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></p>
 
+  <% if @recipe.image? %>
+    <%= image_tag @recipe.image, :class => '', :style => 'width: 100%;'  %>
+  <% else %>
+    <%= image_tag("comming_soon.jpg", :class => 'default-image', :alt => "rss feed") %>
+  <% end %>
 
-  <%= image_tag @recipe.image, :class => '' , :style => 'width: 100%;'  %>
-
-  <h4 class="center description"><strong>Steps: </strong></h4>
+  <h3 class="center description"><strong>Steps: </strong></h3>
   <hr />
-  <%= simple_format(@recipe.description) %>
+  <h3><%= simple_format(@recipe.description) %></h3>
   <hr />
     <% if @recipe.categories.any? %>
-  <p>Category: <%= render @recipe.categories %></p>
+  <h4>Category: <%= render @recipe.categories %></h4>
   <% end %>
   <% if @recipe.ingredients.any? %>
-    <p>Ingredients: <%= render @recipe.ingredients %></p>
+    <h4>Ingredients: <%= render @recipe.ingredients %></h4>
   <% end %>
-  
-  <p>This recipes can be created in <%= @recipe.cooking_time %> minutes</p>
+
+  <h3> <i class="fa fa-clock-o" aria-hidden="true"></i> Time required: <%= @recipe.cooking_time %> minutes</h3>
 
   <div class="pull-right">
     <p class="center">
