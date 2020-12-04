@@ -18,7 +18,9 @@ Rails.application.routes.draw do
     end
   end
   
+  
   get '/signup', to: 'chefs#new'
+  get 'chefs', to: 'chefs#index'
   resources :chefs, except: [:new]
   
   get '/login', to: 'sessions#new'
