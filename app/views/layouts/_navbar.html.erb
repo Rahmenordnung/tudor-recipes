@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar navbar-default ">
+<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,33 +8,61 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "MyRecipes", root_path, class: "navbar-brand", id: "logo" %>
+      <%= link_to "Yummy E-Recipes", root_path, class: "navbar-brand welcome_text", id: "logo" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Chefs", chefs_path %></li>
-        <li><%= link_to "All Recipes", recipes_path %></li>
-        <% if logged_in? %>
-        <li><%= link_to "ChefChat", chat_path %></li>
+        
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><%= link_to "Create a new recipe", new_recipe_path %></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><%= link_to "All Recipes", recipes_path %></li>
+              
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              
               <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+         
             </ul>
           </li>
-        <% end %>
+          
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chefs and Chats <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            <li><%= link_to "Chefs", chefs_path %></li>
+            <li role="separator" class="divider"></li>
+            
+            <% if logged_in? %>
+              <li><%= link_to "ChefChat", chat_path %></li>
+            <% end %>
+          </ul>
+        </li>
+          
+        
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "All Categories", categories_path %></li>
+            <li role="separator" class="divider"></li>
+            <% Category.all.each do |category| %>
+              <li><%= link_to category.title.capitalize, category_path(category) %></li>
+            <% end %>
+            <% if logged_in? && current_chef.admin? %>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to "New Category", new_category_path %></li>
+            <% end %>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ingredients <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to "All Ingredients", ingredients_path %></li>
+            <li role="separator" class="divider"></li>
             <% Ingredient.all.each do |ingredient| %>
               <li><%= link_to ingredient.name.capitalize, ingredient_path(ingredient) %></li>
             <% end %>
@@ -45,12 +73,17 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left">
+      
+      
+      
+      
+      <form class="navbar-form navbar-left" action="/search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input name="q" type="text" class="form-control" placeholder="Recipe search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+      
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <li class="dropdown">
@@ -58,7 +91,6 @@
             <ul class="dropdown-menu">
               <li><%= link_to "View your profile", chef_path(current_chef) %></li>
               <li><%= link_to "Edit your profile", edit_chef_path(current_chef) %></li>
-              <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
               <li><%= link_to "Log out", logout_path, method: :delete %></li>
             </ul>
@@ -67,6 +99,26 @@
           <li><%= link_to "Log in", login_path %></li>  
         <% end %>
       </ul>
+      
+            <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Miscelaneous <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+
+              
+              <li role="separator" class="divider"></li>
+                  <li><%=link_to "About", pages_about_path%></li>
+                <li role="separator" class="divider"></li>
+                  <li><%=link_to "Contact", pages_contact_path%></li>
+                <li role="separator" class="divider"></li>
+                  <li><%=link_to "Charts", pages_charts_path%></li>
+                <li role="separator" class="divider"></li>
+                  <li><%=link_to "Services", pages_services_path%></li>
+            </ul>
+          </li>
+      </ul>
+      
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

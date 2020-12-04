@@ -20,10 +20,8 @@ Rails.application.routes.draw do
   
   
   get '/signup', to: 'chefs#new'
-  get 'chefs', to: 'chefs#index'
-  resources :chefs, except: [:new]
   
-  get '/login', to: 'sessions#new'
+  resources :chefs, except: [:new]
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
