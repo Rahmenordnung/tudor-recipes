@@ -1,0 +1,78 @@
+<%= render 'shared_pages/page_title', title: "New page" %>
+
+<div class="row">
+<div class="contact-form-container">
+  <h2 class="contact-title">Contact Us</h2>
+  <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Drbi accumsan ipsum velit.</p>
+  <%= form_for @contact do |f| %>
+
+      <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :name  %>
+        </div>
+        <div class="col-md-8">
+          <%= f.text_field :name, class: "form-control", placeholder: "Name", required: true %>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :email  %>
+        </div>
+        <div class="col-md-8">
+          <%= f.text_field :email, class: "form-control", placeholder: "Email", required: true %>
+        </div>
+      </div>
+      
+       <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :message  %>
+        </div>
+        <div class="col-md-8">
+          <%= f.text_area :message, class: "form-control", placeholder: "Message", as: :text %>
+        </div>
+      </div>
+      
+      <div class="form-group hidden">
+          <div class="control-label col-md-2">
+              <%= f.label :nickname %><br>
+          </div>
+          <div class="col-md-8">
+              <%= f.text_field :nickname, hint: 'leave this field blanck' %>
+          </div>
+          
+          
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          <%= f.submit 'Send Message', class: "btn btn-primary btn-lg btn-xlarge" %>
+        </div>
+      </div>
+
+
+
+  <% end %>
+      <div class="col-lg-5 col-md-5 contact-form-left">
+          <%= form_for @contact do |f| %>
+        <div class="form-group">
+            <%= f.label :name  %>
+            <%= f.text_field :name, id: "contact_name", class: "form-control", placeholder: "Name", required: true %>
+            
+        </div>
+        <div class="form-group">
+            <%= f.label :email  %>
+            <%= f.text_field :email, id: "contact_email", class: "form-control", placeholder: "Email", required: true %>
+            
+        </div>
+        <div class="form-group">
+            <%= f.label :message  %>
+            <%= f.text_area :message, class: "form-control", placeholder: "Message", as: :text %>
+        </div>
+        <div class="form-group">
+            <%= f.submit 'Send Message', class: "btn text-uppercase templatemo-submit-btn" %>
+        </div>
+
+  <% end %>
+</div>
+</div>
