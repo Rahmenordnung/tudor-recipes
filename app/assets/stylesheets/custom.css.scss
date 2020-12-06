@@ -130,6 +130,10 @@ $navbar-default-bg: #073B15;
   text-decoration: none;
 }
 
+.btn-success{
+  background-color:darkgreen;
+}
+
 body {
   height: 100%;
 }
@@ -471,4 +475,22 @@ footer{
   
 }
 
+/*hover chart page*/
+.card-hover .reveal {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
 
+.card-hover:hover .reveal {
+    height: auto;
+    visibility: visible;
+    opacity: 10;
+    transition: opacity 1s ease;
+}
+
+
+.hidden{
+  display: hidden;
+}

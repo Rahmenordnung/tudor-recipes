@@ -75,6 +75,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   
+  gem 'mail_form', '~> 1.5', '>= 1.5.1'
+  
   
 end
 

@@ -1,9 +1,7 @@
 /*
  
 Motor Template
-
 http://www.templatemo.com/tm-463-motor
-
 */
 
 * { font-family: 'Open Sans', sans-serif; }
@@ -12,11 +10,9 @@ http://www.templatemo.com/tm-463-motor
 .green { color: #6F6; }
 
 /* 
-
 Preloader 
  
 https://ihatetomatoes.net/create-custom-preloading-screen/
-
 */
 #loader-wrapper {
     position: fixed;
@@ -169,7 +165,7 @@ ul {
 }
 a:hover, a:focus { text-decoration: none; }
 body { 
-  background-color: #EAE9EF; 
+  background-color: #dddddd; 
   overflow-x: hidden;
 }
 
@@ -974,4 +970,3 @@ ol.flex-control-nav { display: none; }
     padding-top: 80px;
   }
 }
-

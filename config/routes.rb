@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'pages/home', to: 'pages#home'
   get 'pages/charts', to: 'pages#charts'
   
-  get 'pages/contact', to: 'pages#contact'
+  # get 'pages/contact', to: 'pages#contact'
   get 'pages/about', to: 'pages#about'
   get 'pages/services', to: 'pages#services'
   
@@ -18,14 +18,10 @@ Rails.application.routes.draw do
     end
   end
   
-  
   get '/signup', to: 'chefs#new'
-  
   resources :chefs, except: [:new]
   
-  get '/chefs/id' => 'chefs#id'
-  
-  
+  get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
@@ -38,5 +34,7 @@ Rails.application.routes.draw do
   resources :messages, only: [:create]
   
   get 'search', to: "search#search"
+  
+  resources :contacts, only: [:new, :create]
   
 end

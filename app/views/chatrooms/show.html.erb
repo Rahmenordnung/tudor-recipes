@@ -2,7 +2,7 @@
 
 
 
-<div class="row chat-container">
+<div class="row chat-container" ">
   <div class="col-md-8 center-block">
     <div class="messages" id="messages">
       <%= render @messages %>
@@ -11,8 +11,28 @@
     <div class="message-container">
       <%= form_for(@message, remote: true, :html => {class: "form-horizontal", role: "form"}) do |f| %>
         <%= f.text_area :content, class: "form-control", data: { behavior: "room_speaker" }, placeholder: "Say something!" %>
-        <%= f.submit "Send", class: 'btn btn-primary', data: { send: "message" } %>
+        <%= f.submit "Send", class: 'btn btn-success', data: { send: "message" } %>
       <% end %>
     </div>
   </div>
+</div>
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 center-block">
+            <div class="card card-hover h-100">
+                <div class="card-body" style="text-align: center;">
+                    <i class="fa fa-search fa-5x float-right" style="color: #B53636;"></i>
+                    <i class="fa fa-shopping-cart fa-5x float-right" style="color: darkgreen;"></i>
+                    <h2 class="card-title" style="color: darkgreen;"><b>Shop</b></h2>
+                    <h4 class="card-text subtitle" style="color: darkred;">Tired of chatting, having some ideas...</h4>
+                    <p class="card-text">You can find anything you are looking for by clicking on the banner...</p>
+                    <div class="reveal bg-warning p-2">
+                      <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ez&f=ifr&linkID=101fe925fdeec4600981e46ee6fe4959&t=yummyrecipe-20&tracking_id=yummyrecipe-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
