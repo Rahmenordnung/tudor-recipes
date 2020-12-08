@@ -1,0 +1,88 @@
+<!--Main content-->
+    <section class="container margin-bottom-50">
+
+
+                  <%= video_tag(
+    "Food.mp4", class: "jumbotron_video", autoplay:true, loop:true, muted:true, poster: 'macau.jpg', title: 'jvzguggu' , width:'100%') %>
+      
+      <div class="services-container-1">
+          <h2 class="services-title">HAACP and Useful Information</h2>
+        <div class="services-blocks-container">
+          <div class="services-block">
+            <div class="services-header">
+              <i class="fa fa-plus services-icon"></i>
+              <h3 class="services-title-2"> What is HACCP</h3>
+            </div>
+            <p class="services-description">HACCP stands for Hazard Analysis and Critical Control Point. A food safety management system based on the principles of HACCP is a systematic approach to identifying and controlling hazards, whether microbiological, chemical or physical, that could pose a threat to the production of safe food – in simple terms, it involves identifying what could go wrong in a food system and planning how to prevent it.</p>
+          </div>
+          <div class="services-block">
+            <div class="services-header">
+              <i class="fa fa-plus services-icon"></i>
+              <h3 class="services-title-2"> Kitchen Hygiene Rules</h3>
+            </div>
+            <p class="services-description">The kitchen is a hotspot for bacteria and parasites. This is why good kitchen hygiene during both food preparation and cooking are extremely critical in terms of preventing food borne illnesses.Bacteria may sit on kitchen counters, stick to your raw meats, and end up contaminating all those delicious foods. These being germs, they are for the most part completely invisible.</p>
+          </div>
+        </div>
+        <div class="services-blocks-container">
+          <div class="services-block">
+            <div class="services-header">
+              <i class="fa fa-plus services-icon"></i>
+              <h3 class="services-title-2">Wash Your Hands!</h3>
+            </div>
+            <p class="services-description">Germs can very quickly and easily spread between our hands into the food, so keeping clean hands before initiating in any food handling process is essential. Washing hands properly when you are going to touch raw meat, especially after visiting the toilet or using the kitchen bin significantly helps in reducing the spread of several types of harmful bacteria like salmonella and E. coli.</p>
+          </div>
+          <div class="services-block">
+            <div class="services-header">
+              <i class="fa fa-plus services-icon"></i>
+              <h3 class="services-title-2">Proper Food Storage</h3>
+            </div>
+            <p class="services-description">Correct food storage is as critical as correct cooking. When storing cooked food in your fridge or cooler ensure it is at room temperature or even lower. Placing warm food inside a fridge implies it has not cooled evenly and could as such, cause food poisoning.</p>
+          </div>
+          <div class="services-block">
+            <div class="services-header">
+              <i class="fa fa-plus services-icon"></i>
+              <h3 class="services-title-2">Clean Up and Down</h3>
+            </div>
+            <p class="services-description">After cooking, keeping a clean kitchen is very important. It is estimated that the average kitchen chopping board carries more faecal bacteria compared to the average toilet seat. Never keep cooked food in your refrigerator for more than 7 days.</p>
+          </div>
+          <div class="services-block">
+            <div class="services-header">
+              <i class="fa fa-plus services-icon"></i>
+              <h3 class="services-title-2">Avoid Cross Contamination</h3>
+            </div>
+            <p class="services-description">Always use individual or separate cutting boards for different food ingredients like fish/raw meat/poultry, farm produce, and cooked foods. Using a common chopping/cutting board poses a health risk, but these can be prevented easily through maintaining a clean kitchen at all times. You may, for example, opt to have a distinct red cutting board to be used specifically only for raw animal foods so as to avert any cross contamination.</p>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="about-container-2">
+        <div class="services-container-inner">
+          <h3 class="about-title-2">More kitchen rules</h3>
+          <%= image_tag("clean.jpg", :alt => "img-responsive", :class => "img-responsive margin-bottom-15") %>
+          <p class="about-description">Cleanliness is a vital part of any kitchen and so even more if we are talking about proffesional kitchens. The highest level of hygiene is key for a save food. If you need more tips for a thoroughly cleaning your kitchen please check this site</p>
+          <%= link_to 'Best Kitchen Stuff', 'https://www.besthomekitchenstuff.co.uk/top-10-rules-for-good-kitchen-hygiene/',:class => "about-link about-link-2" %> 
+          
+        </div>
+        <div class="services-container-inner">
+          <h3 class="about-title-2">HACCP office page</h3>
+          <%= image_tag("haccp.jpg", :alt => "img-responsive", :class => "img-responsive margin-bottom-15") %>
+          <p class="about-description">The word HACCP (Hazard Analysis & Critical Control Point)  refers to procedures you must put in place to ensure the food you produce is safe.</p>
+          <%= link_to 'HACCP', 'https://www.fsai.ie/food_businesses/haccp/haccp.html',:class => "about-link about-link-2" %>
+        </div>
+        <div class="services-container-inner">
+          <h3 class="about-title-2">Cross-contamination</h3>
+          <%= image_tag("cross_crontamination.jpg", :alt => "img-responsive", :class => "img-responsive margin-bottom-15") %>
+          <p class="about-description">Bacterial cross-contamination is defined as the transfer of bacteria or other microorganisms from one substance to another. Cross-contamination can also include the transfer of food allergens, chemicals, or toxins.</p>
+          <%= link_to 'Cros_contamination', 'https://www.healthline.com/nutrition/what-is-cross-contamination',:class => "about-link about-link-2" %>
+        </div>
+      </div>
+      
+      
+      <!--banner-->
+      <%= render 'shared_pages/banner_sign_up', title: "sign up banner" %>
+
+
+    </section> <!-- Main content -->
+
+

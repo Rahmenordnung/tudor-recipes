@@ -77,7 +77,11 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 
-
+// Test for ajax success
+console.log("This is the create.js.erb file");
+// Render flash message
+$('#contact').html("<%= j render 'contact_form' %>");
+$('#flash-message').html("<%= j render 'flash' %>").delay(3000).fadeOut(4000);
 
 
 

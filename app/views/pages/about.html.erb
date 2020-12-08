@@ -6,31 +6,30 @@
           
         </div>
         <div class="about-container-right">
-          <h2 class="about-title">fringila ulputate</h2>
-          <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-          <p class="about-description">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-          <a href="#" class="about-link">Duised sitDamet</a>
+          <h2 class="about-title">About me</h2>
+          <p class="about-description">In high school, I was that kid that seemed to never be paying attention. Seemingly in my own world but with to much energy. Even when I focused to class I used and I still do flood the teacher with my own questions. Coding and logic help me focus the flow, but this path is along and arduous path that can only be runned with passion for what I am doing</p>
+          <p class="about-description">I thought that is enough with having the talent and that I don´t need to much order, but this is an error that coding taught me. After this lesson now I my mind now is structurated but still preservs parts of its rebel soul.</p>
+          <%= link_to "Contact me", pages_contact_path, :class => "about-link" %>
+
         </div>
       </div>
       <div class="about-container-2">
         <div class="about-container-inner">
           <h3 class="about-title-2">aenean solcudin</h3>
           <%= image_tag("programming.jpg", :alt => "img-responsive", :class => "img-responsive margin-bottom-15") %>
-          <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-          <a href="#" class="about-link about-link-2">Details</a>
+          <p class="about-description">When I got in contact with code for first time, I was hooked. The internet was my outlet. It was a new way to show and share my passions. I love more and more to dive in as I am getting more and more experience and I am thinking to build my life around it.</p>
+          <%= link_to "HAACP and useful information", pages_haacp_path, :class => "about-link about-link-2" %>
+          
+          
         </div>
         <div class="about-container-inner">
           <h3 class="about-title-2">morbi accumsan</h3>
           <%= image_tag("innovation.jpg", :alt => "img-responsive", :class => "img-responsive margin-bottom-15") %>
-          <p class="about-description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-          <a href="#" class="about-link about-link-2">Details</a>
+          <p class="about-description">I do the work I do because I love it. I like the industry. I like the people I meet. I like to talk shop. I embrace the nerd. I like to make the web a better place. Hopefully we cross paths in the real world someday and we can make it a better place together..</p>
+          <%= link_to 'Rails courses', 'https://guides.rubyonrails.org/index.html',:class => "about-link about-link-2" %> 
         </div>
       </div>
 
       <!--banner-->
-      <div class="tm-banner">
-        <h2 class="tm-banner-title">Maecenas</h2>
-        <p class="tm-banner-description">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium</p>
-        <a href="#" class="tm-banner-link"><i class="fa fa-play"></i></a>
-      </div>
+    <%= render 'shared_pages/banner_sign_up', title: "sign up banner" %>
     </section> <!-- Main content -->

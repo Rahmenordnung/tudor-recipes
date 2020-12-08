@@ -1,53 +1,69 @@
 <%= render 'shared_pages/page_title', title: @recipe.name %>
 
+<!--end recipe whole content-->
+
+<!-- recipe basic content-->
 <div class="well col-md-8 col-md-offset-2">
-  
-<p><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></p>
-
-  <% if @recipe.image? %>
-    <%= image_tag @recipe.image, :class => '', :style => 'width: 100%;'  %>
-  <% else %>
-    <%= image_tag("comming_soon.jpg", :class => 'default-image', :alt => "rss feed") %>
-  <% end %>
-
-  <h3 class="center description"><strong>Steps: </strong></h3>
-  <hr />
-  <h3><%= simple_format(@recipe.description) %></h3>
-  <hr />
-    <% if @recipe.categories.any? %>
-  <h4>Category: <%= render @recipe.categories %></h4>
-  <% end %>
-  <% if @recipe.ingredients.any? %>
-    <h4>Ingredients: <%= render @recipe.ingredients %></h4>
-  <% end %>
-
-  <h3> <i class="fa fa-clock-o" aria-hidden="true"></i> Time required: <%= @recipe.cooking_time %> minutes</h3>
-
-  <div class="pull-right">
-    <p class="center">
-      <em>Created by:</em>
-    </p>
-    <p class="center">
-      <%= link_to gravatar_for(@recipe.chef), chef_path(@recipe.chef) %>
-    </p>
-    <p class="center">
-      <small><%= @recipe.chef.chefname.capitalize %></small>
-      <div class="pull-right"><%= time_ago_in_words(@recipe.created_at) %> ago</div>
-    </p>
+  <h3><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></h3>
+  <!-- pdf downloader section-->
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-warning " style="margin-bottom: 5%;"><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></button>
   </div>
-  <div class="recipe-actions">
-    <% if logged_in? && (current_chef == @recipe.chef || current_chef.admin?) %>
-      <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-xs btn-warning" %>
-      <%= link_to "Delete this recipe", recipe_path(@recipe), method: :delete,
-                                        data: { confirm: "Are you sure you want to delete this recipe?" },
-                                        class: "btn btn-xs btn-danger" %>
-    <% end %>                                  
+  <!-- end pdf downloader section -->
+  
+    <!-- recipes image attribute-->
+    <% if @recipe.image? %>
+      <%= image_tag @recipe.image, :class => '', :style => 'width: 100%;'  %>
+    <% else %>
+      <%= image_tag("comming_soon.jpg", :class => 'default-image', :alt => "rss feed") %>
+    <% end %>
+    <!--end recipes image attribute-->
+  
+    <!-- recipes main attributes-->
+    <h3 class="center description"><strong>Steps: </strong></h3>
+    <hr />
+    <h3><%= simple_format(@recipe.description) %></h3>
+    <hr />
+      <% if @recipe.categories.any? %>
+    <h4>Category: <%= render @recipe.categories %></h4>
+    <% end %>
+    <% if @recipe.ingredients.any? %>
+      <h4>Ingredients: <%= render @recipe.ingredients %></h4>
+    <% end %>
+  
+    <h3> <i class="fa fa-clock-o" aria-hidden="true"></i> Time required: <%= @recipe.cooking_time %> minutes</h3>
+    <!--end recipes main attributes-->
+  
+    <!-- chef section with gravatar-->
+    <div class="pull-right">
+      <p class="center">
+        <em>Created by:</em>
+      </p>
+      <p class="center">
+        <%= link_to gravatar_for(@recipe.chef), chef_path(@recipe.chef) %>
+      </p>
+      <p class="center">
+        <small><%= @recipe.chef.chefname.capitalize %></small>
+        <div class="pull-right"><%= time_ago_in_words(@recipe.created_at) %> ago</div>
+      </p>
+    </div>
+    <!--end chef section with gravatar-->
+    
+    <!--like icons-->
+    <div class="recipe-actions">
+      <% if logged_in? && (current_chef == @recipe.chef || current_chef.admin?) %>
+        <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "btn btn-xs btn-warning" %>
+        <%= link_to "Delete this recipe", recipe_path(@recipe), method: :delete,
+                                          data: { confirm: "Are you sure you want to delete this recipe?" },
+                                          class: "btn btn-xs btn-danger" %>
+      <% end %>                                  
     <%= link_to "Return to recipes listing", recipes_path, class: "btn btn-xs btn-primary" %>
   </div>
+  <!--end recipes action buttons-->
 </div>
+<!--end recipe basic content-->
 
-
-
+<!--like icons-->
 <div class="row">
   <div class="row col-md-8 col-md-offset-2">
     <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
@@ -58,7 +74,11 @@
     <% end %> <%= @recipe.thumbs_down_total %>
   </div>
 </div>
+<!--end like icons-->
 
+<!--end recipe whole content-->
+
+<!--comment box and input-->
 <% if logged_in? %>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -83,8 +103,9 @@
     </div>
   </div>
 <% end %>
+<!--end comment box and input-->
 
-
+<!--previous comments-->
 <% if @recipe.comments != 0 %>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -101,7 +122,9 @@
     </div>
   </div>
 <% end %>
+<!--end previous comments-->
 
+<!-- amazon shopping links-->
 <div class="container">
     <div class="row">
         <div class="col-md-8 center-block">
@@ -119,6 +142,7 @@
         </div>
     </div>
 </div>
+<!--end amazon shopping links-->
 
 
   

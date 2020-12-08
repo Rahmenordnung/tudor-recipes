@@ -4,7 +4,7 @@ Motor Template
 http://www.templatemo.com/tm-463-motor
 */
 
-* { font-family: 'Open Sans', sans-serif; }
+* { font-family: 'Roboto', sans-serif; }
 
 .blue { color: #3CF; }
 .green { color: #6F6; }
@@ -630,6 +630,7 @@ ol.flex-control-nav { display: none; }
 .about-description {
   margin-bottom: 10px;
   text-align: justify;
+  margin-top: 4%;
 }
 
 

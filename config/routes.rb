@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'kontakt/index'
+
+  get 'contact_me/index'
+
   resources :categories
   root "pages#home"
   get 'pages/home', to: 'pages#home'
@@ -6,7 +10,7 @@ Rails.application.routes.draw do
   
   get 'pages/contact', to: 'pages#contact'
   get 'pages/about', to: 'pages#about'
-  get 'pages/services', to: 'pages#services'
+  get 'pages/haccp', to: 'pages#haccp'
   
   
   get 'category/:title', to: 'category#category'
@@ -36,5 +40,10 @@ Rails.application.routes.draw do
   get 'search', to: "search#search"
   
   resources :contacts, only: [:new, :create]
+  
+
+  root      'kontakt#index'
+  resources :kontakt, only: [:index, :new, :create]
+
   
 end

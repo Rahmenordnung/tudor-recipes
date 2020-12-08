@@ -91,6 +91,12 @@ $navbar-default-bg: #073B15;
   -webkit-text-fill-color: transparent;
 }
 
+.sign_up_banner_text{
+  background-image: linear-gradient(to left, #b53636, green, #efefec, #006507, #b53636, #b53636, #f3f3f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -493,4 +499,14 @@ footer{
 
 .hidden{
   display: hidden;
+}
+
+.charts_title{
+  text-align: center; 
+  margin-bottom: 5%;
+}
+
+#ask{
+    text-align: center;
+    margin-bottom: 4%;
 }

@@ -1,30 +1,17 @@
 <%= render 'shared_pages/page_title', title: "Page data in charts" %>
 
 <div class="container">
-    <%= pie_chart Chef.group(:chef_stars).count %>
+    <h1 class="charts_title" >Chefs stars pie chart</h1>
+        <%= pie_chart Chef.group(:chef_stars).count %>
 </div> 
 
 <div class="container">
-    <%= line_chart Recipe.group(:created_at).count %>
+    <h1 class="charts_title" >Recipes creation date time line</h1>
+        <%= line_chart Recipe.group(:created_at).group(:name).count %>
 </div> 
-<div class="container">
-    <%= column_chart Recipe.group(:likes).count %>
-</div>
 
 <div class="container">
-    <%= column_chart Ingredient.group(:name).count %>
-</div>
-
-
-<div class="container">
-    <%=  column_chart Recipe.group(:name).group(:cooking_time).count, legend: true %>
-</div>
-
-<div class="container">
-    <%=  column_chart Chef.group(:chefname).group(:name).count %>
-
-</div>
-<div class="container">
+    <h1 class="charts_title" >Cooking time bar representation</h1>
     <%=  column_chart Recipe.group(:chef_name).group(:cooking_time).count %>
 
 </div>
