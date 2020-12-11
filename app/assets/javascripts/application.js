@@ -23,7 +23,7 @@
 //= require popper
 
 
-
+//makes the window open to the last message in conjunction with coffee code
 function scrollToBottom(){
   if($('#messages').length > 0) {
     $('#messages').scrollTop($('#messages')[0].scrollHeight);
@@ -34,6 +34,8 @@ function submitMessage(event){
    event.preventDefault();
    $('#new_message').submit();
 }
+
+//send message on press
 
 $(document).on('keypress', '[data-behavior~=room_speaker]', function(event) {
    if (event.keyCode == 13) {
@@ -61,7 +63,7 @@ $(window).scroll(function() {
 });
 
  
- 
+//button that goes up to navbar 
 var btn = $('#button');
 
 $(window).scroll(function() {
@@ -77,11 +79,7 @@ btn.on('click', function(e) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 
-// Test for ajax success
-console.log("This is the create.js.erb file");
-// Render flash message
-$('#contact').html("<%= j render 'contact_form' %>");
-$('#flash-message').html("<%= j render 'flash' %>").delay(3000).fadeOut(4000);
+
 
 
 

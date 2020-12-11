@@ -14,5 +14,9 @@ module Recip
     config.action_cable.mount_path = '/cable'
     
     config.assets.paths << "#{Rails.root}/app/assets/videos"
+    
+    
+    config.i18n.available_locales = [:en, :de]
+    config.i18n.default_locale = :en
   end
 end

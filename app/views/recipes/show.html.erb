@@ -4,7 +4,10 @@
 
 <!-- recipe basic content-->
 <div class="well col-md-8 col-md-offset-2">
-  <h3><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></h3>
+  <% if logged_in? %>
+    <h3><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></h3>
+  <% end %>
+  
   <!-- pdf downloader section-->
   <div class="btn-group" role="group" aria-label="Basic example">
     <button type="button" class="btn btn-warning " style="margin-bottom: 5%;"><%= link_to "Printable Recipe (PDF)", recipe_path(@recipe, format: "pdf") %></button>

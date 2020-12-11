@@ -5,7 +5,6 @@ class RecipePdf < Prawn::Document
         recipe_name
         recipe_description
         recipe_cooking_time
-        
     end
     
     def recipe_name

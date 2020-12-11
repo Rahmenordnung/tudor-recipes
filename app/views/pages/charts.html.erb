@@ -1,3 +1,8 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
+</head>
+
+
 <%= render 'shared_pages/page_title', title: "Page data in charts" %>
 
 <div class="container">
@@ -12,7 +17,7 @@
 
 <div class="container">
     <h1 class="charts_title" >Cooking time bar representation</h1>
-    <%=  column_chart Recipe.group(:chef_name).group(:cooking_time).count %>
+    <%=  column_chart Recipe.group(:chef_name).group(:name).count, legend: true %>
 
 </div>
 

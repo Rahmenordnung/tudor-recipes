@@ -9,7 +9,9 @@
           <li class="chef-title"><%= link_to ing.name.capitalize, ingredient_path(ing) %></li>
           <li><small><%= pluralize(ing.recipes.count, "recipe") if ing.recipes %></small></li>
           <% if logged_in? && current_chef.admin? %>
-            <li><%= link_to "Edit this ingredient", edit_ingredient_path(ing) %></li>
+            <%= link_to "Edit this ingredient", edit_ingredient_path(ing), class: "btn btn-xs btn-warning" %>
+            <%= link_to "Delete this ingredient", ingredient_path(ing), method: :delete, class: "btn btn-xs btn-danger",
+                  data: {confirm: "Are you sure you want to delete the ingredient and all associated recipes?"} %>
           <% end %>
         </div>
       </div>
@@ -21,7 +23,7 @@
   <%= will_paginate %>
 </div>
 
-
+<!--javascript -->
     <script>
   var btn = $('#button');
     

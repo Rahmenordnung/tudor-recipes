@@ -1,170 +1,171 @@
-  
-   <!-- Bootstrap CSS -->
-
-    <title>TechScroll</title>
+  <head>
+    <title>Homepage</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    
-  
-  
   </head>
-  <body>
-
-    <div class="jumbotron center " id="first_container">
+  
+  <!--start main content-->
+<body>
+    <!--jumbotron-->
+  <div class="jumbotron center " id="first_container">
       <div class="main-element">
       <h1 class="welcome_text" >Welcome to Yummy E-Recipes</h1>
       <h2 class= "welcome_text" >The best recipe sharing app!</h2>
       <p><%= link_to "View all Recipes", recipes_path, class: "btn btn-danger btn-lg btn-xlarge" %></p>
-      </div>
-    </div> 
+    </div>
+  </div>
+    <!--end jumbotron-->
     
-    <%= render 'shared_pages/banner_sign_up', title: "sign up banner" %>
-    
-         <div class="container">
-    
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <%= image_tag("salsa.jpg", :alt => "rss feed", :style => "width:100%") %>
+    <!--sign_up banner partial-->
+      <%= render 'shared_pages/banner_sign_up', title: "sign up banner" %>
+    <!--end sign_up banner partial-->
+  
+  <!--carousel container-->
+  <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
         
-      </div>
-
-      <div class="item">
-        <%= image_tag("paella.jpg", :alt => "rss feed", :style => "width:100%") %>
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
         
-      </div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag("salsa.jpg", :alt => "rss feed", :style => "width:100%") %>
+          </div>
     
-      <div class="item">
-        <%= image_tag("chat.jpg", :alt => "rss feed", :style => "width:100%") %>
+          <div class="item">
+            <%= image_tag("paella.jpg", :alt => "rss feed", :style => "width:100%") %>
+          </div>
+        
+          <div class="item">
+            <%= image_tag("chat.jpg", :alt => "rss feed", :style => "width:100%") %>
+          </div>
+        </div>
+    
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-
-    <section id="showcase">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="showcase-left">
-                <%= image_tag("recipez.jpg", :alt => "rss feed") %>
+    <!--end carousel container-->
+    
+    <!--main showcase-->
+      <!--first section -->
+      <section id="showcase">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="showcase-left">
+                  <%= image_tag("recipez.jpg", :alt => "rss feed") %>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="showcase-right">
-              <h1>Help from Yummy means enjoying food</h1>
-              <h4>Recipes – tried and tested for you and your family. Enjoy the best collection of recipes on the web. Find recipes by name, by ingredients, category or chef. And when you’ve found the recipe of your dreams, you can print it so you always have it to hand. Talk to other chefs about moms sectret tips or grandmas forgotten ingrediensts, about  new creations or about how much you like to talk about it.... </h4>
-            </div>
-            <br>
-            <a class="btn btn-default btn-lg showcase-btn showcase-btn ">Read More</a>
-             
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonial">
-      <div class="container">
-        <p>"My mothers menu consisted of two choices, take it or leave it" ... “I don’t know what it is about food your mother makes for you, especially when it’s something that anyone can make – pancakes, meat loaf, tuna salad – but it carries a certain taste of memory.” </p>
-        <p class="customer">-Buddy Hackett & - Mitch Albom</p>
-      </div>
-    </section>
-
-    <section id="info1">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="info-left">
-                <%= image_tag("pepper.jpg", :alt => "rss feed", :class => "img_left") %>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="info-right">
-              <h2>Get To Know Real Yummy Recipes In "E" Format</h2>
-              <h4>Yummy E-Recipes is Ireland’s go-to source for all things food. It is the ultimate cooking and kitchen guide for home cooks, from fail-safe recipes to expert tips from our very own custom-built test kitchen.</h4>
+            <div class="col-md-6 col-sm-6">
+              <div class="showcase-right">
+                <h1>Using Yummy means to enjoy food</h1>
+                <h4>Recipes – tried and tested for you and your family. Enjoy the best collection of recipes on the web. Find recipes by name, by ingredients, category or chef. And when you’ve found the recipe of your dreams, you can print it so you always have it to hand. Talk to other chefs about moms sectret tips or grandmas forgotten ingrediensts, about  new creations or about how much you like to talk about it.... </h4>
+              </div>
               <br>
-              <a class="btn btn-default btn-lg">Read More</a>
+              <a class="btn btn-default btn-lg showcase-btn showcase-btn ">Read More</a>
+               
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <hr>
-    <section id="info2">
+      </section>
+    
+      <!--second section quotes -->
+      <section id="testimonial">
+        <div class="container">
+          <p>"My mothers menu consisted of two choices, take it or leave it" ... “I don’t know what it is about food your mother makes for you, especially when it’s something that anyone can make – pancakes, meat loaf, tuna salad – but it carries a certain taste of memory.” </p>
+          <p class="customer">-Buddy Hackett & - Mitch Albom</p>
+        </div>
+      </section>
+  
+      <!--third section -->
+      <section id="info1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="info-left">
+                  <%= image_tag("pepper.jpg", :alt => "rss feed", :class => "img_left") %>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="info-right">
+                <h2>Get To Know Real Yummy Recipes In "E" Format</h2>
+                <h4>Yummy E-Recipes is Ireland’s go-to source for all things food. It is the ultimate cooking and kitchen guide for home cooks, from fail-safe recipes to expert tips from our very own custom-built test kitchen.</h4>
+                <br>
+                <a class="btn btn-default btn-lg">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <!--forth section additional information-->
+      <section id="info2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="info-left">
+                <h2>Leave us a comment</h2>
+                <p>Did you liked the recipe, it was tasty for you, or somebody in your family liked so much that made you a compliment. Come and post your opinion, leave a comment, thumb up for that 3 starts chef. </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="info-right">
+                <h2>Do you require something?</h2>
+                <p>No problem, from our page you will be connected all the products that you and your recipe need in order to make you and your belly fell you full and happy. Just click on the promotional links...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!--fifth section sencond quotes -->
+      <section id="testimonial">
+        <div class="container">
+          <p>"My father raised me with the idea that you always have to do better than the person next to you. As a foreigner man, you have to perform three times better than the other person. I saw that in kitchens right away: we were the cooks, but we were never the chefs, never the operators." ... "Now kichen is more universal than ever and there is no more tastes barriers because a good food joins people from all over the places...amazing" </p>
+          <p class="customer">- Jerome Grant & - Tudor Pascu </p>
+        </div>
+      </section>
+      <!--end main showcase-->
+        
+      <!--amazon sopping container -->
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="info-left">
-              <h2>Leave us a comment</h2>
-              <p>Did you liked the recipe, it was tasty for you, or somebody in your family liked so much that made you a compliment. Come and post your opinion, leave a comment, thumb up for that 3 starts chef. </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="info-right">
-              <h2>Do you require something?</h2>
-              <p>No problem, from our page you will be connected all the products that you and your recipe need in order to make you and your belly fell you full and happy. Just click on the promotional links...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="testimonial">
-      <div class="container">
-        <p>""My father raised me with the idea that you always have to do better than the person next to you. As a foreigner man, you have to perform three times better than the other person. I saw that in kitchens right away: we were the cooks, but we were never the chefs, never the operators." ... "Now kichen is more universal than ever and there is no more tastes barriers because a good food joins people from all over the places...amazing" </p>
-        <p class="customer">- Jerome Grant & - Tudor Pascu </p>
-      </div>
-    </section>
-    
-    <div class="container">
-    <div class="row">
-        <div class="col-md-8 center-block">
-            <div class="card card-hover h-100">
-                <div class="card-body" style="text-align: center;">
-                    <i class="fa fa-search fa-5x float-right" style="color: #B53636;"></i>
-                    <i class="fa fa-shopping-cart fa-5x float-right" style="color: darkgreen;"></i>
-                    <h2 class="card-title" style="color: darkgreen;"><b>Shop</b></h2>
-                    <h4 class="card-text subtitle" style="color: darkred;">Having some ideas...Find the best products here
-                    </h4>
-                    <p class="card-text">You can find anything you are looking for by clicking on the banner...</p>
-                    <div class="reveal bg-warning p-2">
-                      <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ez&f=ifr&linkID=101fe925fdeec4600981e46ee6fe4959&t=yummyrecipe-20&tracking_id=yummyrecipe-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            <div class="col-md-8 center-block">
+                <div class="card card-hover h-100">
+                    <div class="card-body" style="text-align: center;">
+                        <i class="fa fa-search fa-5x float-right" style="color: #B53636;"></i>
+                        <i class="fa fa-shopping-cart fa-5x float-right" style="color: darkgreen;"></i>
+                        <h2 class="card-title" style="color: darkgreen;"><b>Shop</b></h2>
+                        <h4 class="card-text subtitle" style="color: darkred;">Having some ideas...Find the best products here
+                        </h4>
+                        <p class="card-text">You can find anything you are looking for by clicking on the banner...</p>
+                        <div class="reveal bg-warning p-2">
+                          <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ez&f=ifr&linkID=101fe925fdeec4600981e46ee6fe4959&t=yummyrecipe-20&tracking_id=yummyrecipe-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+      </div>
+      <!--end amazon sopping container -->
     
-    
+  <!-- Back to top button -->
+    <a id="button"></a>
 
-    
-    <!-- Back to top button -->
-      <a id="button"></a>
-    
-
-  
-  <!-- Option 1: Bootstrap Bundle with Popper.js -->
-
-     <!--Option 2: Separate Popper.js and Bootstrap JS-->
-    
+<body>  <!--end main content-->
 
     <script>
         window.sr = ScrollReveal();

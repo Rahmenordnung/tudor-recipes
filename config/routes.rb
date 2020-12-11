@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'kontakt/index'
-
-  get 'contact_me/index'
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
   resources :categories
   root "pages#home"
@@ -42,8 +40,10 @@ Rails.application.routes.draw do
   # resources :contacts, only: [:new, :create]
   
 
-  root      'kontakt#index'
-  resources :kontakt, only: [:index, :new, :create]
+  # root      'kontakt#index'
+  # resources :kontakt, only: [:index, :new, :create]
+  # get 'kontakt/index'
+    # get 'contact_me/index'
 
-  
+  end
 end

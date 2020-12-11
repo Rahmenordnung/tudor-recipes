@@ -2,13 +2,29 @@ $navbar-default-bg: #073B15;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "ionicons";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+//general settings
 
+*{
+  width: initial;
+}
 
+h1{
+  
+}
+
+h2,h3,h4,h5,h6{
+  font-family:Poppins;
+}
+
+p{
+  font-family:Roboto;
+}
+
+/*main container*/
 .container{
       margin-top: 5%;
       margin-bottom: 10%;
@@ -37,13 +53,6 @@ $navbar-default-bg: #073B15;
 
 .jumbotron {
   background-color: #fff;
-  // background-image: asset-url('cover_image.png');
-  // background-size: cover;
-  // height: 300px;
-  // position:absolute;
-  // top:40%;
-  // left:35%;
-  // z-index:1;
 }
 .img-responsive{
   margin-top: 7%;
@@ -65,19 +74,6 @@ $navbar-default-bg: #073B15;
 }
 
 
-.background_video{  
-  height: 100%;      
-  width: 100%;
-  // position:relative;
-  //   z-index:0;
-}
-
-.default-image{
-  background-size: cover;
-  width: 100%;
-}
-
-
 .jumbotron {
   margin-top: 5%;
 }
@@ -85,18 +81,21 @@ $navbar-default-bg: #073B15;
   width: inherit;
 }
 
+//logo styling
 .welcome_text{
   background-image: linear-gradient(to left, #b53636, green, green, #b53636, #0f0909, green, #130000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+//sign_up text styling
 .sign_up_banner_text{
   background-image: linear-gradient(to left, #b53636, green, #efefec, #006507, #b53636, #b53636, #f3f3f2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+//logo styling
 #logo {
   float: left;
   font-size: 1.7em;
@@ -144,6 +143,91 @@ body {
   height: 100%;
 }
 
+
+//video tag class
+.background_video{  
+  height: 100%;      
+  width: 100%;
+  // position:relative;
+  //   z-index:0;
+}
+
+//video tag default image
+.default-image{
+  background-size: cover;
+  width: 100%;
+}
+
+/*navbar*/
+.navbar-default{
+  background:#fff;
+  border:0;
+  font-family:Poppins;
+  box-shadow: 0px 9px 5px 0px rgba(181,54,54,0.99);
+}
+
+.navbar-brand{
+  font-size:20px;
+  color:#000 !important;
+  font-weight:bold;
+}
+
+#showcase h1{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+#showcase img{
+  width: 96.5%;
+}
+
+.img_left{
+  width: 96.5%;
+}
+
+#showcase .showcase-right{
+  margin-top:30px;
+}
+
+#testimonial{
+  background-color:#fff;
+  padding: 50px 0 30px 0;
+  text-align:center;
+  margin-top:40px;
+}
+
+//home page specific containers
+#testimonial p{
+  font-size:32px;
+  font-family: 'Josefin Sans';
+  color:#000;
+}
+
+#testimonial p.customer{
+  font-size:20px;
+  color:#666;
+}
+
+#info1 .info-right{
+  margin-top:30px;
+}
+
+#info2{
+  margin:20px 0 60px 0;
+}
+/*end home settings*/
+
+#contact{
+  
+  padding:40px;
+  color:#fff;
+  border-top:#333 7px solid;
+  border-bottom:#333 7px solid;
+}
+
+
+/*footer setings*/
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -151,8 +235,8 @@ footer {
   color: #777;
   padding-left: 10px;
   padding-right: 10px;
+  padding: 30px;
 }
-
 
 footer a {
   color: #555;
@@ -180,7 +264,7 @@ footer ul li {
   margin-top: 0;
 }
 
-/*hoover boxes recipes*/
+/*hoover index recipes for each recipe*/
 @media screen and ( min-width: 1000px) {
 
 
@@ -232,6 +316,8 @@ footer ul li {
   color: #073B15;
 }
 
+//chef settings
+
 .chef_info {
   margin-top: 10px;
 }
@@ -247,16 +333,12 @@ footer ul li {
   }
 }
 
-.listing {
-  list-style: none;
-  padding-left: 0;
-}
-
 .chef-title {
   color: #073B15;
   font-weight: bold;
   font-size: 1.25em;
 }
+
 
 .input_checkbox input {
   width: auto !important;
@@ -265,7 +347,7 @@ footer ul li {
 .center-block {
   float: none;
 }
-
+//chat and comments css
 .chat-container {
   bottom: 0;
   left: 0;
@@ -299,10 +381,16 @@ footer ul li {
   overflow: auto;
 }
 
+
+.listing {
+  list-style: none;
+  padding-left: 0;
+}
 .liking {
   padding-right: 10px;
 }
 
+//search box effect
 #q{
   
     border-radius: 5px;
@@ -316,9 +404,7 @@ footer ul li {
 }
 
 
-
-
-/*botton navigation*/
+/*static pages button settings about page*/
 
 .about-link {
   background: #b53636;
@@ -345,91 +431,6 @@ footer ul li {
   background: black;
 }
 
-/*navbar*/
-
-*{
-  width: initial;
-}
-
-h1{
-  
-}
-
-h2,h3,h4,h5,h6{
-  font-family:Poppins;
-}
-
-p{
-  font-family:Roboto;
-}
-
-.navbar-default{
-  background:#fff;
-  border:0;
-  font-family:Poppins;
-  box-shadow: 0px 9px 5px 0px rgba(181,54,54,0.99);
-}
-
-.navbar-brand{
-  font-size:20px;
-  color:#000 !important;
-  font-weight:bold;
-}
-
-#showcase h1{
-  font-size:50px;
-  margin-bottom:20px;
-}
-
-#showcase img{
-  width: 96.5%;
-}
-
-.img_left{
-  width: 96.5%;
-}
-
-#showcase .showcase-right{
-  margin-top:30px;
-}
-
-#testimonial{
-  background-color:#fff;
-  padding: 50px 0 30px 0;
-  text-align:center;
-  margin-top:40px;
-}
-
-#testimonial p{
-  font-size:32px;
-  font-family: 'Josefin Sans';
-  color:#000;
-}
-
-#testimonial p.customer{
-  font-size:20px;
-  color:#666;
-}
-
-#info1 .info-right{
-  margin-top:30px;
-}
-
-#info2{
-  margin:20px 0 60px 0;
-}
-
-#contact{
-  background:url(../img/image3.png);
-  padding:40px;
-  color:#fff;
-  border-top:#333 7px solid;
-  border-bottom:#333 7px solid;
-}
-
-footer{
-  padding:30px;
-}
 
 
 /*up page button*/
@@ -496,17 +497,10 @@ footer{
     transition: opacity 1s ease;
 }
 
-
-.hidden{
-  display: hidden;
-}
-
 .charts_title{
-  text-align: center; 
+  text-align:center;
   margin-bottom: 5%;
 }
 
-#ask{
-    text-align: center;
-    margin-bottom: 4%;
-}
+
+

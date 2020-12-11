@@ -18,30 +18,40 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
-gem "font-ionicons-rails", git: 'https://github.com/ricardoemerson/font-ionicons-rails.git'
-
+#icons for styling
 gem 'font-awesome-sass', '~> 4.6.2'
 
+#create testing environment
 gem 'rails-controller-testing'
 
+#add to images in models
 gem 'carrierwave', '~> 2.0'
 
+#pdf generator page
 gem 'prawn'
 
+#scroll effect for page
 gem "scrollreveal-rails" 
 
+#jquery helper for rails
 gem 'popper_js', '~> 1.14.5'
 
+#pagination 
 gem 'will_paginate', '3.1.0'
+#pagination with bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
+#charts with data from models
 gem 'chartkick', '~> 2.2.0'
 
-
+#generate erd diagrams automatically
 gem 'ruby-graphviz'
 
 gem 'railroady', '~> 1.5', '>= 1.5.3'
 
 gem 'rails-erd', :require=>false
+
+#translation gem
+gem 'rails-i18n'
 
 
 
