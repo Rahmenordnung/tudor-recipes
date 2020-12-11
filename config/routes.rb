@@ -37,13 +37,11 @@ Rails.application.routes.draw do
   
   get 'search', to: "search#search"
   
-  # resources :contacts, only: [:new, :create]
+  resources :contacts, only: [:new, :create]
+  
+  get '/contacts/new/' => "contacts#new", as: :contacts_root
   
 
-  # root      'kontakt#index'
-  # resources :kontakt, only: [:index, :new, :create]
-  # get 'kontakt/index'
-    # get 'contact_me/index'
 
   end
 end
